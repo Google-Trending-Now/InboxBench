@@ -1,0 +1,2511 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Email Subject Line Score Checker | InboxBench</title>
+  <meta name="description" content="Free email subject line score checker for US marketers. Catch spam triggers, preview mobile inbox truncation, and test sharper rewrites before you send." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://inboxbench.com/free-email-subject-line-score-checker" />
+
+  <!-- Open Graph & Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="InboxBench" />
+  <meta property="og:title" content="Free Email Subject Line Score Checker | InboxBench" />
+  <meta property="og:description" content="Free email subject line score checker for US marketers. Catch spam triggers, preview mobile inbox truncation, and test sharper rewrites before you send." />
+  <meta property="og:url" content="https://inboxbench.com/free-email-subject-line-score-checker" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Email Subject Line Score Checker | InboxBench" />
+  <meta name="twitter:description" content="Catch spam triggers, preview mobile inbox truncation, and test sharper email subject lines in seconds." />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231D4ED8'/%3E%3Cpath d='M6 10.5L16 17.5L26 10.5' stroke='%23FFFFFF' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Crect x='6' y='9' width='20' height='14' rx='2.5' stroke='%23FFFFFF' stroke-width='2.2' fill='none'/%3E%3C/svg%3E" />
+
+  <!-- Typography: Plus Jakarta Sans + IBM Plex Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Structured Data: SoftwareApplication & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "InboxBench Free Email Subject Line Score Checker",
+        "url": "https://inboxbench.com/free-email-subject-line-score-checker",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "description": "A free email subject line score checker for US B2B, e-commerce, and creator marketers that evaluates length, clarity, spam-trigger words, mobile truncation, and rewrite options.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How does this free email subject line score checker calculate scores?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The tool scores your subject line out of 100 across four weighted criteria: mobile length and word count (25 points), spam-trigger and formatting hygiene (25 points), clarity and specificity (25 points), and tone balance for your chosen campaign type (25 points)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the ideal email subject line length for US mobile inboxes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Aim for 30 to 45 characters (about 4 to 7 words). iPhone Mail in portrait mode typically clips subject lines around 36 to 38 characters, while Gmail on Android shows roughly 40 to 45 characters before adding an ellipsis."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why do B2B cold emails score differently from e-commerce promos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "B2B prospects expect a cold email subject line to look like a quick note from a peer, so short lowercase phrases without emojis or hype tend to perform best. E-commerce promos can include clear dollar or percentage savings, provided they avoid stacking multiple aggressive trigger phrases."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does avoiding spam-trigger words guarantee primary inbox placement?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No single subject line check guarantees primary tab delivery. Inbox providers also weigh sender authentication (SPF, DKIM, DMARC), list engagement, complaint rates, and email body quality. Keeping your subject line clean simply removes an avoidable filter signal."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my subject line sent to an external server or stored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All scoring, spam scanning, mobile previews, and rewrite suggestions run locally inside your browser. Your drafts stay on your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should I put in the preheader text alongside my subject line?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Treat the preheader as the second half of your subject line. Avoid repeating the subject line or leaving default text like 'View in browser.' Instead, add a concrete detail, timeframe, or proof point that reinforces why the email is worth opening."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg-canvas: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #F1F5F9;
+      --bg-inset: #F8FAFC;
+      --border-hairline: #E2E8F0;
+      --border-strong: #CBD5E1;
+      --text-primary: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #64748B;
+      --accent: #1D4ED8;
+      --accent-hover: #1E40AF;
+      --accent-soft: #EFF6FF;
+      --accent-border: #BFDBFE;
+      --status-good: #15803D;
+      --status-good-bg: #F0FDF4;
+      --status-good-border: #BBF7D0;
+      --status-warn: #B45309;
+      --status-warn-bg: #FFFBEB;
+      --status-warn-border: #FDE68A;
+      --status-bad: #B91C1C;
+      --status-bad-bg: #FEF2F2;
+      --status-bad-border: #FECACA;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+      --radius-sm: 6px;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    /* Accessible Focus States */
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .tabular {
+      font-family: var(--font-mono);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Layout Container */
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Top Bar Contract: 3 clean zones */
+    .site-header {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-hairline);
+      position: sticky;
+      top: 0;
+      z-index: 30;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      height: 60px;
+    }
+
+    .brand-wordmark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding: 4px 0;
+      border-bottom: 1.5px solid transparent;
+      transition: color 150ms var(--ease-out), border-color 150ms var(--ease-out);
+    }
+
+    .nav-links a:hover {
+      color: var(--text-primary);
+      border-bottom-color: var(--border-strong);
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      background-color: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      min-height: 40px;
+      transition: background-color 150ms var(--ease-out), transform 150ms var(--ease-out);
+    }
+
+    .header-cta:hover {
+      background-color: var(--accent-hover);
+    }
+
+    .header-cta:active {
+      transform: translateY(1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 40px 0 28px;
+    }
+
+    .hero-kicker {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin: 0 0 10px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(1.875rem, 3.6vw, 2.85rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      text-wrap: balance;
+      max-width: 24ch;
+    }
+
+    .hero-lead {
+      margin: 0;
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      max-width: 64ch;
+      line-height: 1.55;
+    }
+
+    /* Workspace Layout */
+    .workspace-section {
+      padding-bottom: 56px;
+    }
+
+    .workspace-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .surface-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+    }
+
+    /* Segmented Campaign Context Control */
+    .context-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .segmented-group {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      padding: 4px;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-md);
+      width: 100%;
+    }
+
+    .seg-btn {
+      flex: 1 1 auto;
+      appearance: none;
+      border: none;
+      background: transparent;
+      color: var(--text-secondary);
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      white-space: nowrap;
+      min-height: 38px;
+      transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+    }
+
+    .seg-btn:hover {
+      color: var(--text-primary);
+    }
+
+    .seg-btn[aria-pressed="true"] {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    /* Subject Input Area */
+    .input-wrap {
+      position: relative;
+      margin-bottom: 14px;
+    }
+
+    .subject-input {
+      width: 100%;
+      padding: 14px 16px;
+      font-family: var(--font-sans);
+      font-size: 1.0625rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      background: var(--bg-surface);
+      border: 1.5px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      transition: border-color 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+    }
+
+    .subject-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+    }
+
+    .subject-input::placeholder {
+      color: #94A3B8;
+      font-weight: 400;
+    }
+
+    .meta-inputs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .sub-input {
+      width: 100%;
+      padding: 10px 12px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      color: var(--text-primary);
+      background: var(--bg-inset);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      transition: border-color 150ms var(--ease-out), background-color 150ms var(--ease-out);
+    }
+
+    .sub-input:focus {
+      outline: none;
+      background: var(--bg-surface);
+      border-color: var(--accent);
+    }
+
+    .input-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-hairline);
+    }
+
+    .live-counts {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+    }
+
+    .action-btn-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 18px;
+      min-height: 42px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #FFFFFF;
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms var(--ease-out), transform 150ms var(--ease-out);
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .btn-secondary {
+      appearance: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 10px 14px;
+      min-height: 42px;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 150ms var(--ease-out), color 150ms var(--ease-out);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-subtle);
+      color: var(--text-primary);
+    }
+
+    /* Quick Sample Buttons */
+    .samples-block {
+      padding-top: 16px;
+    }
+
+    .samples-title {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      margin: 0 0 10px;
+    }
+
+    .samples-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+
+    .sample-btn {
+      appearance: none;
+      width: 100%;
+      text-align: left;
+      padding: 10px 12px;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: border-color 150ms var(--ease-out), background-color 150ms var(--ease-out);
+    }
+
+    .sample-btn:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+    }
+
+    .sample-meta {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .sample-text {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Score Summary Strip */
+    .score-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border-hairline);
+      margin-bottom: 20px;
+    }
+
+    .score-main {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .score-dial {
+      position: relative;
+      width: 76px;
+      height: 76px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .score-dial svg {
+      transform: rotate(-90deg);
+      width: 76px;
+      height: 76px;
+    }
+
+    .score-dial-bg {
+      fill: none;
+      stroke: var(--bg-subtle);
+      stroke-width: 6;
+    }
+
+    .score-dial-fill {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 6;
+      stroke-linecap: round;
+      transition: stroke-dashoffset 250ms var(--ease-out), stroke 200ms var(--ease-out);
+    }
+
+    .score-num {
+      position: absolute;
+      font-family: var(--font-mono);
+      font-size: 1.375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .score-verdict-title {
+      margin: 0 0 4px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .status-text-tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .status-good {
+      color: var(--status-good);
+      background: var(--status-good-bg);
+      border-color: var(--status-good-border);
+    }
+
+    .status-warn {
+      color: var(--status-warn);
+      background: var(--status-warn-bg);
+      border-color: var(--status-warn-border);
+    }
+
+    .status-bad {
+      color: var(--status-bad);
+      background: var(--status-bad-bg);
+      border-color: var(--status-bad-border);
+    }
+
+    .score-summary-copy {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      max-width: 44ch;
+    }
+
+    /* Diagnostic Breakdown Rows */
+    .diag-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .diag-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .diag-top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .diag-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .diag-stat {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .meter-track {
+      width: 100%;
+      height: 6px;
+      background: var(--bg-subtle);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .meter-fill {
+      height: 100%;
+      border-radius: 999px;
+      transition: width 220ms var(--ease-out), background-color 200ms var(--ease-out);
+    }
+
+    .diag-note {
+      margin: 0;
+      font-size: 0.8125rem;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* Spam Trigger Highlights */
+    .spam-hits {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .spam-word {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: var(--status-bad);
+      background: var(--status-bad-bg);
+      border: 1px solid var(--status-bad-border);
+      padding: 2px 8px;
+      border-radius: 4px;
+    }
+
+    /* Suggestions & Rewrites Blocks (Stacked cleanly with dividers, no card-in-card clutter) */
+    .sub-block {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .sub-block-title {
+      margin: 0 0 12px;
+      font-size: 0.9375rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .tips-list {
+      margin: 0;
+      padding-left: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .tips-list li {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* Rewrite Variations */
+    .rewrites-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .rewrite-row {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--bg-inset);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+    }
+
+    .rewrite-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .rewrite-line {
+      margin: 0;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .rewrite-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .mini-btn {
+      appearance: none;
+      padding: 6px 12px;
+      min-height: 36px;
+      font-family: var(--font-sans);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-strong);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background-color 140ms var(--ease-out), border-color 140ms var(--ease-out);
+    }
+
+    .mini-btn:hover {
+      background: var(--bg-subtle);
+    }
+
+    .mini-btn-accent {
+      color: var(--accent);
+      border-color: var(--accent-border);
+      background: var(--accent-soft);
+    }
+
+    .mini-btn-accent:hover {
+      background: #DBEAFE;
+    }
+
+    /* Mobile Inbox Preview */
+    .preview-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .preview-tabs {
+      display: inline-flex;
+      gap: 4px;
+      padding: 3px;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+    }
+
+    .preview-tab {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 5px 10px;
+      min-height: 32px;
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      border-radius: 4px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .preview-tab[aria-pressed="true"] {
+      background: var(--bg-surface);
+      color: var(--text-primary);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    .phone-frame {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+      padding: 14px;
+    }
+
+    .inbox-row {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .inbox-row-muted {
+      opacity: 0.55;
+      margin-top: 8px;
+    }
+
+    .inbox-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 3px;
+    }
+
+    .inbox-sender {
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .inbox-time {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .inbox-subject {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+      line-height: 1.35;
+    }
+
+    .inbox-subject .clipped {
+      color: #94A3B8;
+      font-weight: 400;
+    }
+
+    .inbox-preheader {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .preview-caption {
+      margin: 10px 0 0;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Recent Session Tests Table */
+    .history-table-wrap {
+      overflow-x: auto;
+      margin-top: 8px;
+    }
+
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .history-table th {
+      text-align: left;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      padding: 8px 10px;
+      border-bottom: 1px solid var(--border-hairline);
+      white-space: nowrap;
+    }
+
+    .history-table td {
+      padding: 10px;
+      border-bottom: 1px solid var(--border-hairline);
+      vertical-align: middle;
+    }
+
+    .history-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .history-table th.num,
+    .history-table td.num {
+      text-align: right;
+    }
+
+    .history-subject-btn {
+      appearance: none;
+      border: none;
+      background: transparent;
+      padding: 0;
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      text-align: left;
+      cursor: pointer;
+      max-width: 340px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    .history-subject-btn:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    /* Educational Sections */
+    .content-section {
+      padding: 48px 0;
+      border-top: 1px solid var(--border-hairline);
+    }
+
+    .section-header {
+      margin-bottom: 28px;
+    }
+
+    .section-header h2 {
+      margin: 0 0 8px;
+      font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      text-wrap: balance;
+    }
+
+    .section-header p {
+      margin: 0;
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      max-width: 64ch;
+    }
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .criteria-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+    }
+
+    .criteria-num {
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .criteria-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .criteria-card p {
+      margin: 0;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    /* Benchmarks Table */
+    .benchmarks-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .bench-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .bench-table th {
+      text-align: left;
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-hairline);
+      white-space: nowrap;
+    }
+
+    .bench-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-hairline);
+      color: var(--text-secondary);
+      vertical-align: top;
+    }
+
+    .bench-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .bench-table td strong {
+      color: var(--text-primary);
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 840px;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-hairline);
+      border-radius: var(--radius-md);
+    }
+
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 20px;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      color: var(--text-muted);
+      transition: transform 180ms var(--ease-out);
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      padding: 0 20px 18px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-hairline);
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: var(--text-primary);
+      text-decoration: underline;
+    }
+
+    /* Responsive Breakpoints */
+    @media (min-width: 640px) {
+      .surface-card {
+        padding: 24px;
+      }
+      .meta-inputs-grid {
+        grid-template-columns: 1fr 1.6fr;
+      }
+      .samples-list {
+        grid-template-columns: 1fr 1fr;
+      }
+      .criteria-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .rewrite-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .workspace-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 24px;
+      }
+      .criteria-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header: 3-Zone Top Bar Contract -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand-wordmark">
+        <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#1D4ED8"></rect>
+          <path d="M6 10.5L16 17.5L26 10.5" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
+          <rect x="6" y="9" width="20" height="14" rx="2.5" stroke="#FFFFFF" stroke-width="2.2" fill="none"></rect>
+        </svg>
+        <span>InboxBench</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#tester">Subject Tester</a>
+        <a href="#scoring-guide">How It Scores</a>
+        <a href="#benchmarks">US Benchmarks</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a href="#tester" class="header-cta" id="header-jump-btn">Test a Subject Line</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-kicker">
+          <span>Client-side diagnostics</span>
+          <span aria-hidden="true">&middot;</span>
+          <span>No sign-up required</span>
+          <span aria-hidden="true">&middot;</span>
+          <span>Built for US B2B, e-commerce &amp; newsletters</span>
+        </p>
+        <h1>Free Email Subject Line Score Checker</h1>
+        <p class="hero-lead">
+          Check how your subject line reads before it lands in a crowded inbox. Catch spam-filter phrases, spot mobile clipping on iOS and Gmail, and generate cleaner variations in seconds.
+        </p>
+      </div>
+    </section>
+
+    <!-- Interactive Tester Workspace -->
+    <section class="workspace-section" id="tester" aria-label="Email Subject Line Testing Workspace">
+      <div class="container">
+        <div class="workspace-grid">
+
+          <!-- Left Column: Input, Samples, Score & Rewrites -->
+          <div class="surface-card">
+            <div class="context-bar">
+              <div style="width: 100%;">
+                <span class="field-label" id="context-label">Campaign type</span>
+                <div class="segmented-group" role="group" aria-labelledby="context-label">
+                  <button type="button" class="seg-btn" data-context="cold" aria-pressed="true">Cold Outreach</button>
+                  <button type="button" class="seg-btn" data-context="newsletter" aria-pressed="false">Newsletter</button>
+                  <button type="button" class="seg-btn" data-context="promo" aria-pressed="false">Promo / Sale</button>
+                  <button type="button" class="seg-btn" data-context="cart" aria-pressed="false">Abandoned Cart</button>
+                </div>
+              </div>
+            </div>
+
+            <form id="tester-form" novalidate>
+              <div class="input-wrap">
+                <label for="subject-input" class="field-label">Email subject line</label>
+                <input
+                  id="subject-input"
+                  name="subject"
+                  type="text"
+                  class="subject-input"
+                  value="Quick thought on {{Company}}'s onboarding flow"
+                  placeholder="Type or paste your email subject line..."
+                  maxlength="160"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="meta-inputs-grid">
+                <div>
+                  <label for="sender-input" class="field-label">Sender name (for preview)</label>
+                  <input
+                    id="sender-input"
+                    type="text"
+                    class="sub-input"
+                    value="Hannah at Northstar"
+                    placeholder="e.g., Alex from Acme"
+                    maxlength="50"
+                  />
+                </div>
+                <div>
+                  <label for="preheader-input" class="field-label">Preheader / preview text</label>
+                  <input
+                    id="preheader-input"
+                    type="text"
+                    class="sub-input"
+                    value="Noticed two drop-off points in your signup checklist."
+                    placeholder="Optional second line shown in inbox..."
+                    maxlength="140"
+                  />
+                </div>
+              </div>
+
+              <div class="input-actions">
+                <div class="live-counts" aria-live="polite">
+                  <span><strong class="tabular" id="char-count">45</strong> chars</span>
+                  <span aria-hidden="true">&middot;</span>
+                  <span><strong class="tabular" id="word-count">6</strong> words</span>
+                  <span aria-hidden="true">&middot;</span>
+                  <span id="mobile-fit-badge">Fits mobile</span>
+                </div>
+                <div class="action-btn-row">
+                  <button type="button" class="btn-secondary" id="clear-btn">Clear</button>
+                  <button type="submit" class="btn-primary" id="score-btn">Score &amp; Rewrite</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Instant Score & Rewrite Variations -->
+            <div class="sub-block" id="results-anchor">
+              <div class="score-header">
+                <div class="score-main">
+                  <div class="score-dial" aria-label="Overall subject line score">
+                    <svg viewBox="0 0 80 80" aria-hidden="true">
+                      <circle class="score-dial-bg" cx="40" cy="40" r="34"></circle>
+                      <circle class="score-dial-fill" id="score-ring" cx="40" cy="40" r="34" stroke-dasharray="213.6" stroke-dashoffset="32"></circle>
+                    </svg>
+                    <span class="score-num" id="score-value">85</span>
+                  </div>
+                  <div>
+                    <h2 class="score-verdict-title">
+                      <span id="verdict-headline">Strong inbox candidate</span>
+                      <span class="status-text-tag status-good" id="verdict-tag">Ready to send</span>
+                    </h2>
+                    <p class="score-summary-copy" id="verdict-summary">
+                      Concise, conversational, and free of spam triggers for B2B outreach.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Actionable Suggestions -->
+              <div>
+                <h3 class="sub-block-title">Practical improvements</h3>
+                <ul class="tips-list" id="tips-list"></ul>
+              </div>
+
+              <!-- Rewrite Variations -->
+              <div class="sub-block">
+                <div class="sub-block-title">
+                  <span>Suggested rewrite angles</span>
+                  <button type="button" class="mini-btn" id="refresh-rewrites-btn">Shuffle angles</button>
+                </div>
+                <div class="rewrites-grid" id="rewrites-list"></div>
+              </div>
+            </div>
+
+            <!-- One-Click Realistic Samples -->
+            <div class="sub-block samples-block">
+              <p class="samples-title">Test a realistic US email sample in one click</p>
+              <div class="samples-list">
+                <button type="button" class="sample-btn" data-sample="0">
+                  <span class="sample-meta">Cold Outreach &middot; Strong</span>
+                  <span class="sample-text">Quick thought on {{Company}}'s onboarding flow</span>
+                </button>
+                <button type="button" class="sample-btn" data-sample="1">
+                  <span class="sample-meta">Cold Outreach &middot; Over-hyped</span>
+                  <span class="sample-text">FREE DEMO: Revolutionize your B2B sales pipeline TODAY!!</span>
+                </button>
+                <button type="button" class="sample-btn" data-sample="2">
+                  <span class="sample-meta">Newsletter &middot; Curiosity + Stat</span>
+                  <span class="sample-text">Why 68% of SaaS churn happens before day 14</span>
+                </button>
+                <button type="button" class="sample-btn" data-sample="3">
+                  <span class="sample-meta">Newsletter &middot; Generic</span>
+                  <span class="sample-text">November Monthly Newsletter - Company Updates &amp; News</span>
+                </button>
+                <button type="button" class="sample-btn" data-sample="4">
+                  <span class="sample-meta">Flash Sale / Promo &middot; Balanced</span>
+                  <span class="sample-text">20% off fall essentials ends tonight at midnight</span>
+                </button>
+                <button type="button" class="sample-btn" data-sample="5">
+                  <span class="sample-meta">Abandoned Cart &middot; Spam Risk</span>
+                  <span class="sample-text">URGENT!! Act now to claim your 100% FREE gift before it expires!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Mobile Preview & Diagnostic Breakdown -->
+          <div style="display: flex; flex-direction: column; gap: 24px;">
+            <!-- Mobile Inbox Preview -->
+            <div class="surface-card">
+              <div class="preview-controls">
+                <h2 style="margin: 0; font-size: 1rem; font-weight: 700;">Mobile inbox preview</h2>
+                <div class="preview-tabs" role="group" aria-label="Email client preview">
+                  <button type="button" class="preview-tab" data-client="ios" aria-pressed="true">iPhone Mail</button>
+                  <button type="button" class="preview-tab" data-client="gmail" aria-pressed="false">Gmail App</button>
+                </div>
+              </div>
+
+              <div class="phone-frame">
+                <div class="inbox-row">
+                  <div class="inbox-top">
+                    <span class="inbox-sender" id="preview-sender">Hannah at Northstar</span>
+                    <span class="inbox-time">9:42 AM</span>
+                  </div>
+                  <div class="inbox-subject" id="preview-subject"></div>
+                  <div class="inbox-preheader" id="preview-preheader">Noticed two drop-off points in your signup checklist.</div>
+                </div>
+                <div class="inbox-row inbox-row-muted" aria-hidden="true">
+                  <div class="inbox-top">
+                    <span class="inbox-sender">Stripe Billing</span>
+                    <span class="inbox-time">Yesterday</span>
+                  </div>
+                  <div class="inbox-subject">Your October payout summary is ready</div>
+                  <div class="inbox-preheader">View your latest statement and settlement details.</div>
+                </div>
+              </div>
+              <p class="preview-caption" id="preview-caption">
+                Simulated 375px viewport &middot; iPhone Mail clips around 36&ndash;38 characters.
+              </p>
+            </div>
+
+            <!-- Diagnostic Breakdown -->
+            <div class="surface-card">
+              <h2 style="margin: 0 0 18px; font-size: 1rem; font-weight: 700;">Diagnostic breakdown</h2>
+              <div class="diag-list">
+                <!-- Length & Mobile Fit -->
+                <div class="diag-item">
+                  <div class="diag-top">
+                    <span class="diag-name">Length &amp; mobile truncation</span>
+                    <span class="diag-stat">
+                      <span class="tabular" id="score-length">24/25</span>
+                      <span class="status-text-tag status-good" id="badge-length">Optimal</span>
+                    </span>
+                  </div>
+                  <div class="meter-track"><div class="meter-fill" id="bar-length" style="width: 96%;"></div></div>
+                  <p class="diag-note" id="note-length"></p>
+                </div>
+
+                <!-- Spam-Trigger Scan -->
+                <div class="diag-item">
+                  <div class="diag-top">
+                    <span class="diag-name">Spam-trigger &amp; formatting scan</span>
+                    <span class="diag-stat">
+                      <span class="tabular" id="score-spam">25/25</span>
+                      <span class="status-text-tag status-good" id="badge-spam">Clean</span>
+                    </span>
+                  </div>
+                  <div class="meter-track"><div class="meter-fill" id="bar-spam" style="width: 100%;"></div></div>
+                  <p class="diag-note" id="note-spam"></p>
+                  <div class="spam-hits" id="spam-hits"></div>
+                </div>
+
+                <!-- Clarity & Open-Rate Potential -->
+                <div class="diag-item">
+                  <div class="diag-top">
+                    <span class="diag-name">Clarity &amp; open-rate pull</span>
+                    <span class="diag-stat">
+                      <span class="tabular" id="score-clarity">21/25</span>
+                      <span class="status-text-tag status-good" id="badge-clarity">Clear</span>
+                    </span>
+                  </div>
+                  <div class="meter-track"><div class="meter-fill" id="bar-clarity" style="width: 84%;"></div></div>
+                  <p class="diag-note" id="note-clarity"></p>
+                </div>
+
+                <!-- Urgency vs. Curiosity Balance -->
+                <div class="diag-item">
+                  <div class="diag-top">
+                    <span class="diag-name">Urgency &amp; curiosity balance</span>
+                    <span class="diag-stat">
+                      <span class="tabular" id="score-balance">20/25</span>
+                      <span class="status-text-tag status-good" id="badge-balance">Balanced</span>
+                    </span>
+                  </div>
+                  <div class="meter-track"><div class="meter-fill" id="bar-balance" style="width: 80%;"></div></div>
+                  <p class="diag-note" id="note-balance"></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Session Comparison Log -->
+            <div class="surface-card">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px;">
+                <h2 style="margin: 0; font-size: 1rem; font-weight: 700;">Tested variations</h2>
+                <button type="button" class="mini-btn" id="clear-history-btn">Clear list</button>
+              </div>
+              <p style="margin: 0 0 10px; font-size: 0.8125rem; color: var(--text-muted);">
+                Click "Score &amp; Rewrite" or load a sample to compare candidates side by side.
+              </p>
+              <div class="history-table-wrap">
+                <table class="history-table">
+                  <thead>
+                    <tr>
+                      <th>Subject line</th>
+                      <th class="num">Chars</th>
+                      <th class="num">Score</th>
+                    </tr>
+                  </thead>
+                  <tbody id="history-tbody"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Scores -->
+    <section class="content-section" id="scoring-guide">
+      <div class="container">
+        <div class="section-header">
+          <h2>How this email subject line score checker evaluates your copy</h2>
+          <p>
+            Instead of grading every campaign with a generic formula, InboxBench adjusts expectations based on whether you are sending a 1-to-1 cold email, a weekly newsletter, or a time-sensitive store promotion.
+          </p>
+        </div>
+
+        <div class="criteria-grid">
+          <div class="criteria-card">
+            <span class="criteria-num">01 &middot; 25 pts</span>
+            <h3>Mobile inbox fit</h3>
+            <p>More than half of US email opens happen on phones. Keeping key words inside the first 38 characters prevents your hook from getting cut off mid-thought.</p>
+          </div>
+          <div class="criteria-card">
+            <span class="criteria-num">02 &middot; 25 pts</span>
+            <h3>Spam &amp; formatting hygiene</h3>
+            <p>Flags high-risk phrases ("100% free", "act now", "risk-free"), stacked exclamation marks, and all-caps shouting that push campaigns into Spam or Promotions.</p>
+          </div>
+          <div class="criteria-card">
+            <span class="criteria-num">03 &middot; 25 pts</span>
+            <h3>Specificity &amp; readability</h3>
+            <p>Concrete numbers, plain-spoken verbs, and clear topics beat vague openers like "Checking in" or "Monthly Update" that give readers zero reason to open.</p>
+          </div>
+          <div class="criteria-card">
+            <span class="criteria-num">04 &middot; 25 pts</span>
+            <h3>Curiosity vs. false urgency</h3>
+            <p>Measures whether your line creates genuine interest without sounding manipulative. Cold outreach favors peer tone; retail promos reward crisp, honest deadlines.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmarks Table -->
+    <section class="content-section" id="benchmarks">
+      <div class="container">
+        <div class="section-header">
+          <h2>Practical subject line benchmarks by campaign type</h2>
+          <p>Use these baseline targets when writing subject lines for US audiences across B2B sales, creator newsletters, and direct-to-consumer e-commerce.</p>
+        </div>
+
+        <div class="benchmarks-card">
+          <div style="overflow-x: auto;">
+            <table class="bench-table">
+              <thead>
+                <tr>
+                  <th>Campaign type</th>
+                  <th>Target length</th>
+                  <th>Tone &amp; formatting</th>
+                  <th>Common mistake to avoid</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>B2B Cold Outreach</strong></td>
+                  <td class="tabular">20&ndash;42 chars (2&ndash;6 words)</td>
+                  <td>Sentence case or lowercase, no emojis, reads like an internal colleague note.</td>
+                  <td>Sounding like a marketing flyer ("FREE demo!", "Boost ROI 10x").</td>
+                </tr>
+                <tr>
+                  <td><strong>Creator &amp; Editorial Newsletter</strong></td>
+                  <td class="tabular">30&ndash;52 chars (5&ndash;8 words)</td>
+                  <td>Specific takeaway, contrarian stat, or focused question.</td>
+                  <td>Labeling only the date or issue number ("May Newsletter #14").</td>
+                </tr>
+                <tr>
+                  <td><strong>Flash Sale / E-Commerce Promo</strong></td>
+                  <td class="tabular">28&ndash;48 chars (4&ndash;8 words)</td>
+                  <td>One clear offer plus an honest timeframe ("20% off ends at midnight").</td>
+                  <td>Stacking multiple urgency triggers ("URGENT! Final hours! Act now!!").</td>
+                </tr>
+                <tr>
+                  <td><strong>Abandoned Cart Recovery</strong></td>
+                  <td class="tabular">24&ndash;46 chars (4&ndash;7 words)</td>
+                  <td>Helpful reminder naming the item or category, low-pressure tone.</td>
+                  <td>Guilt-tripping or fake order-confirmation phrasing ("Your order status").</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <h2>Frequently asked questions</h2>
+          <p>Straight answers on subject line testing, deliverability signals, and mobile inbox previews.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item" open>
+            <summary>
+              <span>How does this free email subject line score checker calculate scores?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              The tool scores your subject line out of 100 across four weighted criteria: mobile length and word count (25 points), spam-trigger and formatting hygiene (25 points), clarity and specificity (25 points), and tone balance for your chosen campaign type (25 points).
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What is the ideal email subject line length for US mobile inboxes?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Aim for 30 to 45 characters (about 4 to 7 words). iPhone Mail in portrait mode typically clips subject lines around 36 to 38 characters, while Gmail on Android shows roughly 40 to 45 characters before adding an ellipsis.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Why do B2B cold emails score differently from e-commerce promos?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              B2B prospects expect a cold email subject line to look like a quick note from a peer, so short lowercase phrases without emojis or hype tend to perform best. E-commerce promos can include clear dollar or percentage savings, provided they avoid stacking multiple aggressive trigger phrases.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Does avoiding spam-trigger words guarantee primary inbox placement?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              No single subject line check guarantees primary tab delivery. Inbox providers also weigh sender authentication (SPF, DKIM, DMARC), list engagement, complaint rates, and email body quality. Keeping your subject line clean simply removes an avoidable filter signal.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>Is my subject line sent to an external server or stored?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              No. All scoring, spam scanning, mobile previews, and rewrite suggestions run locally inside your browser. Your drafts stay on your device.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>
+              <span>What should I put in the preheader text alongside my subject line?</span>
+              <svg class="faq-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </summary>
+            <div class="faq-answer">
+              Treat the preheader as the second half of your subject line. Avoid repeating the subject line or leaving default text like "View in browser." Instead, add a concrete detail, timeframe, or proof point that reinforces why the email is worth opening.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>InboxBench &middot; Free Email Subject Line Score Checker &middot; Client-side utility</span>
+      <div class="footer-links">
+        <a href="#tester">Tester</a>
+        <a href="#scoring-guide">Scoring Criteria</a>
+        <a href="#benchmarks">Benchmarks</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      'use strict';
+
+      // --- State ---
+      var state = {
+        context: 'cold', // 'cold' | 'newsletter' | 'promo' | 'cart'
+        client: 'ios',   // 'ios' | 'gmail'
+        shuffleOffset: 0,
+        history: []
+      };
+
+      // --- Realistic US Sample Library ---
+      var SAMPLES = [
+        {
+          context: 'cold',
+          subject: "Quick thought on {{Company}}'s onboarding flow",
+          sender: 'Hannah at Northstar',
+          preheader: 'Noticed two drop-off points in your signup checklist.'
+        },
+        {
+          context: 'cold',
+          subject: 'FREE DEMO: Revolutionize your B2B sales pipeline TODAY!!',
+          sender: 'GrowthBlast AI',
+          preheader: 'Act now to unlock 10x qualified leads guaranteed!'
+        },
+        {
+          context: 'newsletter',
+          subject: 'Why 68% of SaaS churn happens before day 14',
+          sender: 'Field Notes Weekly',
+          preheader: 'Plus 3 onboarding teardowns from US B2B teams.'
+        },
+        {
+          context: 'newsletter',
+          subject: 'November Monthly Newsletter - Company Updates & News',
+          sender: 'Acme Corp Team',
+          preheader: 'View this email in your browser if images do not load.'
+        },
+        {
+          context: 'promo',
+          subject: '20% off fall essentials ends tonight at midnight',
+          sender: 'Cedar & Loom',
+          preheader: 'Code FALL20 applies automatically at checkout.'
+        },
+        {
+          context: 'cart',
+          subject: 'URGENT!! Act now to claim your 100% FREE gift before it expires!',
+          sender: 'ShopDeals Outlet',
+          preheader: 'Hurry, limited time offer only! Click below now!'
+        }
+      ];
+
+      // --- Spam Trigger Dictionaries ---
+      var HIGH_RISK_PHRASES = [
+        '100% free', 'act now', 'guaranteed', 'no obligation', 'risk-free',
+        'risk free', 'winner', 'congratulations', 'cash bonus', 'earn extra',
+        'urgent response', 'click below', 'buy direct', 'limited time only',
+        'free money', 'miracle', 'double your', 'order today', 'apply now',
+        'claim your', 'instant access', 'no credit check'
+      ];
+
+      var MODERATE_TRIGGERS = [
+        'free', 'urgent', 'hurry', 'expires', 'final hours', 'last chance',
+        'discount', 'save big', 'order now', 'offer expires', 'clearance',
+        'cheap', 'special promotion', 'exclusive deal', 'bonus', 'don\'t miss'
+      ];
+
+      var VAGUE_PHRASES = [
+        'checking in', 'touching base', 'following up', 'monthly newsletter',
+        'weekly newsletter', 'company updates', 'quick question', 'hello',
+        'hi there', 'update', 'newsletter #'
+      ];
+
+      var HYPE_WORDS = [
+        'revolutionize', 'supercharge', 'skyrocket', 'unleash', 'game-changer',
+        'game changer', 'mind-blowing', 'crush it', 'dominate', 'elevate'
+      ];
+
+      var ALLOWED_ACRONYMS = {
+        'US': true, 'USA': true, 'B2B': true, 'B2C': true, 'ROI': true,
+        'CRM': true, 'VIP': true, 'CEO': true, 'CFO': true, 'CTO': true,
+        'VP': true, 'Q1': true, 'Q2': true, 'Q3': true, 'Q4': true,
+        'SaaS': true, 'AI': true, 'API': true, 'SEO': true, 'HR': true,
+        'IT': true, 'PDF': true, 'SOC2': true, 'FAQ': true, 'EST': true,
+        'PST': true, 'CST': true, 'DIY': true, 'PR': true, 'OK': true
+      };
+
+      var CONTEXT_CONFIG = {
+        cold: { label: 'Cold Outreach', minChars: 18, idealMax: 44, maxChars: 58 },
+        newsletter: { label: 'Newsletter', minChars: 24, idealMax: 52, maxChars: 65 },
+        promo: { label: 'Promo / Sale', minChars: 22, idealMax: 48, maxChars: 60 },
+        cart: { label: 'Abandoned Cart', minChars: 20, idealMax: 46, maxChars: 58 }
+      };
+
+      // --- DOM Elements ---
+      var elSubject = document.getElementById('subject-input');
+      var elSender = document.getElementById('sender-input');
+      var elPreheader = document.getElementById('preheader-input');
+      var elForm = document.getElementById('tester-form');
+      var elClearBtn = document.getElementById('clear-btn');
+      var elCharCount = document.getElementById('char-count');
+      var elWordCount = document.getElementById('word-count');
+      var elMobileFitBadge = document.getElementById('mobile-fit-badge');
+      var elScoreValue = document.getElementById('score-value');
+      var elScoreRing = document.getElementById('score-ring');
+      var elVerdictHeadline = document.getElementById('verdict-headline');
+      var elVerdictTag = document.getElementById('verdict-tag');
+      var elVerdictSummary = document.getElementById('verdict-summary');
+      var elTipsList = document.getElementById('tips-list');
+      var elRewritesList = document.getElementById('rewrites-list');
+      var elRefreshRewrites = document.getElementById('refresh-rewrites-btn');
+      var elPreviewSender = document.getElementById('preview-sender');
+      var elPreviewSubject = document.getElementById('preview-subject');
+      var elPreviewPreheader = document.getElementById('preview-preheader');
+      var elPreviewCaption = document.getElementById('preview-caption');
+      var elSpamHits = document.getElementById('spam-hits');
+      var elHistoryTbody = document.getElementById('history-tbody');
+      var elClearHistoryBtn = document.getElementById('clear-history-btn');
+
+      // --- Helpers ---
+      function escapeHtml(str) {
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#39;');
+      }
+
+      function countEmojis(str) {
+        var matches = str.match(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu);
+        return matches ? matches.length : 0;
+      }
+
+      function findAllCapsWords(str) {
+        var tokens = str.replace(/\{\{[^}]+\}\}/g, '').split(/\s+/);
+        var caps = [];
+        for (var i = 0; i < tokens.length; i++) {
+          var clean = tokens[i].replace(/[^A-Za-z0-9]/g, '');
+          if (clean.length >= 3 && clean === clean.toUpperCase() && /[A-Z]/.test(clean)) {
+            if (!ALLOWED_ACRONYMS[clean]) {
+              caps.push(clean);
+            }
+          }
+        }
+        return caps;
+      }
+
+      function setStatusStyle(badgeEl, barEl, ratio) {
+        badgeEl.classList.remove('status-good', 'status-warn', 'status-bad');
+        if (ratio >= 0.78) {
+          badgeEl.classList.add('status-good');
+          barEl.style.backgroundColor = '#15803D';
+        } else if (ratio >= 0.52) {
+          badgeEl.classList.add('status-warn');
+          barEl.style.backgroundColor = '#B45309';
+        } else {
+          badgeEl.classList.add('status-bad');
+          barEl.style.backgroundColor = '#B91C1C';
+        }
+      }
+
+      // --- Core Heuristic Scoring Engine ---
+      function analyzeSubject(rawText, contextKey) {
+        var text = (rawText || '').trim();
+        var lower = text.toLowerCase();
+        var cfg = CONTEXT_CONFIG[contextKey] || CONTEXT_CONFIG.cold;
+
+        if (!text) {
+          return {
+            empty: true,
+            total: 0,
+            chars: 0,
+            words: 0,
+            lengthScore: 0,
+            spamScore: 0,
+            clarityScore: 0,
+            balanceScore: 0,
+            spamHits: [],
+            tips: ['Type or paste a subject line above, or click one of the US email samples below to run a check.'],
+            verdictHeadline: 'Waiting for a subject line',
+            verdictTag: 'Enter text',
+            verdictClass: 'status-warn',
+            verdictSummary: 'Enter at least a few words to check length, spam signals, and mobile truncation.',
+            lengthNote: 'No text entered yet.',
+            spamNote: 'No text entered yet.',
+            clarityNote: 'No text entered yet.',
+            balanceNote: 'No text entered yet.',
+            lengthLabel: 'Empty',
+            spamLabel: 'Empty',
+            clarityLabel: 'Empty',
+            balanceLabel: 'Empty'
+          };
+        }
+
+        var chars = text.length;
+        var wordsArr = text.split(/\s+/).filter(Boolean);
+        var words = wordsArr.length;
+        var tips = [];
+
+        // 1. Length & Mobile Fit (25 pts)
+        var lengthScore = 25;
+        var lengthLabel = 'Optimal';
+        var lengthNote = '';
+
+        if (chars < 10) {
+          lengthScore = 11;
+          lengthLabel = 'Too short';
+          lengthNote = chars + ' chars is unusually terse and may lack context in busy inboxes.';
+          tips.push('Add a few concrete words so the recipient knows what the email is about before opening.');
+        } else if (chars <= cfg.idealMax) {
+          lengthScore = 25;
+          lengthLabel = 'Optimal';
+          lengthNote = chars + ' chars (' + words + ' words) fits cleanly inside both iPhone Mail and Gmail mobile previews.';
+        } else if (chars <= cfg.maxChars) {
+          lengthScore = 19;
+          lengthLabel = 'Slightly long';
+          lengthNote = chars + ' chars will clip on smaller phones after ~38 chars, though the core message still shows on desktop.';
+          tips.push('At ' + chars + ' characters, mobile apps will trim the tail. Put your sharpest words in the first 36 characters.');
+        } else {
+          lengthScore = Math.max(6, 25 - Math.round((chars - cfg.maxChars) * 0.45));
+          lengthLabel = 'Truncated';
+          lengthNote = chars + ' chars gets cut off heavily on mobile screens, hiding the second half of your pitch.';
+          tips.push('Trim ' + (chars - cfg.idealMax) + '+ characters so your main point survives mobile truncation.');
+        }
+
+        if (words > 9 && lengthScore > 16) {
+          lengthScore -= 3;
+        }
+
+        // 2. Spam-Trigger & Formatting Scan (25 pts)
+        var spamScore = 25;
+        var foundTriggers = [];
+        var i;
+
+        for (i = 0; i < HIGH_RISK_PHRASES.length; i++) {
+          if (lower.indexOf(HIGH_RISK_PHRASES[i]) !== -1) {
+            foundTriggers.push(HIGH_RISK_PHRASES[i]);
+            spamScore -= 8;
+          }
+        }
+        for (i = 0; i < MODERATE_TRIGGERS.length; i++) {
+          var term = MODERATE_TRIGGERS[i];
+          var regex = new RegExp('\\b' + term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+          if (regex.test(lower) && foundTriggers.indexOf(term) === -1) {
+            foundTriggers.push(term);
+            spamScore -= (contextKey === 'promo' || contextKey === 'cart') ? 4 : 6;
+          }
+        }
+
+        var capsWords = findAllCapsWords(text);
+        if (capsWords.length > 0) {
+          spamScore -= Math.min(10, capsWords.length * 5);
+          for (i = 0; i < capsWords.length; i++) {
+            foundTriggers.push('CAPS: ' + capsWords[i]);
+          }
+          tips.push('Replace all-caps words (' + capsWords.join(', ') + ') with normal sentence case to avoid looking like bulk spam.');
+        }
+
+        var exclamations = (text.match(/!/g) || []).length;
+        if (exclamations >= 2) {
+          spamScore -= 6;
+          foundTriggers.push(exclamations + ' exclamation marks');
+          tips.push('Drop the stacked exclamation marks. One at most for retail promos; zero for B2B cold emails.');
+        } else if (exclamations === 1 && contextKey === 'cold') {
+          spamScore -= 3;
+          tips.push('Consider removing the exclamation point—plain periods or no punctuation feel more natural in B2B outreach.');
+        }
+
+        if (/\${2,}|% off.*free|\?\!|\!\?/i.test(text)) {
+          spamScore -= 5;
+          foundTriggers.push('aggressive symbols');
+        }
+
+        if (/^(re:|fwd:)\s/i.test(text) && contextKey !== 'cold') {
+          spamScore -= 6;
+          foundTriggers.push('fake thread prefix');
+          tips.push('Avoid starting mass emails with "Re:" or "Fwd:"—readers view fake reply prefixes as deceptive.');
+        }
+
+        spamScore = Math.max(0, Math.min(25, spamScore));
+        var spamLabel = spamScore >= 21 ? 'Clean' : (spamScore >= 14 ? 'Caution' : 'High risk');
+        var spamNote = '';
+        if (foundTriggers.length === 0) {
+          spamNote = 'No common spam-filter triggers, fake prefixes, or excessive punctuation detected.';
+        } else {
+          spamNote = 'Detected ' + foundTriggers.length + ' filter or promo-tab signal' + (foundTriggers.length > 1 ? 's' : '') + ' that can hurt deliverability.';
+          if (foundTriggers.some(function (t) { return t.indexOf('CAPS:') !== 0 && t.indexOf('exclamation') === -1; })) {
+            tips.push('Swap out high-pressure trigger phrasing for specific, everyday language (e.g., name the exact benefit or timeframe).');
+          }
+        }
+
+        // 3. Clarity & Open-Rate Potential (25 pts)
+        var clarityScore = 17; // baseline
+        var hasNumber = /\d+/.test(text);
+        var hasPersonalization = /\{\{[^}]+\}\}|\[[A-Za-z_ ]+\]|\byour\b|\byou\b/i.test(text);
+        var hasActionOrBenefit = /\b(save|cut|reduce|fix|improve|guide|checklist|teardown|breakdown|flow|strategy|plan|ends|tonight|minutes?|steps?|mistakes?|why|how)\b/i.test(lower);
+        var isVague = VAGUE_PHRASES.some(function (p) { return lower.indexOf(p) !== -1; });
+        var hasHype = HYPE_WORDS.some(function (p) { return lower.indexOf(p) !== -1; });
+
+        if (hasNumber) clarityScore += 4;
+        if (hasPersonalization) clarityScore += 3;
+        if (hasActionOrBenefit) clarityScore += 3;
+        if (words >= 4 && words <= 8) clarityScore += 2;
+
+        if (isVague) {
+          clarityScore -= 8;
+          tips.push('Replace generic filler ("monthly newsletter", "checking in") with the single most interesting takeaway inside the email.');
+        }
+        if (hasHype) {
+          clarityScore -= 5;
+          tips.push('Cut inflated buzzwords ("revolutionize", "supercharge")—readers trust concrete outcomes over hype.');
+        }
+
+        var avgWordLen = text.replace(/[^a-zA-Z]/g, '').length / Math.max(1, words);
+        if (avgWordLen > 7.2) {
+          clarityScore -= 3;
+          tips.push('Use shorter, everyday words so your subject line can be skimmed in under half a second.');
+        }
+
+        clarityScore = Math.max(4, Math.min(25, clarityScore));
+        var clarityLabel = clarityScore >= 20 ? 'Clear' : (clarityScore >= 14 ? 'Fair' : 'Vague');
+        var clarityNote = '';
+        if (clarityScore >= 20) {
+          clarityNote = 'Specific, scannable wording gives the reader an immediate reason to open.';
+        } else if (isVague) {
+          clarityNote = 'Reads like a generic label rather than a clear value hook.';
+        } else {
+          clarityNote = 'Adding a specific number, company reference, or outcome could lift open intent.';
+        }
+
+        // 4. Urgency vs. Curiosity Balance (25 pts)
+        var balanceScore = 18;
+        var hasQuestion = /\?$/.test(text) || /^(why|how|what|are|is|do|did|ready|still)\b/i.test(lower);
+        var hasUrgency = /\b(tonight|midnight|today|hours left|ends|deadline|tomorrow|last day)\b/i.test(lower);
+        var hasCuriosity = /\b(why|how|secret|mistake|behind|inside|truth|thought|idea|what happened|compared|vs\.?)\b/i.test(lower);
+        var emojiCount = countEmojis(text);
+
+        if (contextKey === 'cold') {
+          if (hasCuriosity || /\b(thought|question|idea|note|feedback)\b/i.test(lower)) balanceScore += 5;
+          if (hasUrgency) {
+            balanceScore -= 5;
+            tips.push('Artificial urgency ("today", "deadline") usually backfires in cold outreach—lead with relevance instead.');
+          }
+          if (emojiCount > 0) {
+            balanceScore -= 6;
+            tips.push('Remove emojis for B2B cold outreach; plain text looks like a personal note rather than an automated sequence.');
+          }
+        } else if (contextKey === 'newsletter') {
+          if (hasCuriosity || hasQuestion || hasNumber) balanceScore += 6;
+          if (emojiCount > 1) {
+            balanceScore -= 4;
+            tips.push('Stick to zero or at most one relevant emoji so your newsletter looks editorial rather than promotional.');
+          }
+        } else if (contextKey === 'promo' || contextKey === 'cart') {
+          if (hasUrgency && !hasHype && spamScore >= 18) balanceScore += 5;
+          if (hasNumber) balanceScore += 2;
+          if (emojiCount > 2) {
+            balanceScore -= 4;
+            tips.push('More than two emojis often looks cluttered in mobile inboxes. Keep it to one or none.');
+          }
+        }
+
+        if (hasQuestion && text.indexOf('?') !== -1 && !/\?\!/.test(text)) {
+          balanceScore += 2;
+        }
+
+        balanceScore = Math.max(5, Math.min(25, balanceScore));
+        var balanceLabel = balanceScore >= 20 ? 'Balanced' : (balanceScore >= 14 ? 'Uneven' : 'Pushy');
+        var balanceNote = '';
+        if (balanceScore >= 20) {
+          balanceNote = 'Well-calibrated tone for ' + cfg.label.toLowerCase() + '—invites a click without feeling forced.';
+        } else if (contextKey === 'cold' && (emojiCount > 0 || hasUrgency)) {
+          balanceNote = 'Feels too promotional for a 1-to-1 cold email; tone it down to sound conversational.';
+        } else {
+          balanceNote = 'Lean harder into a clear curiosity hook or a single concrete benefit.';
+        }
+
+        // Total & Verdict
+        var total = Math.max(0, Math.min(100, lengthScore + spamScore + clarityScore + balanceScore));
+        var verdictHeadline, verdictTag, verdictClass, verdictSummary;
+
+        if (total >= 82) {
+          verdictHeadline = 'Strong inbox candidate';
+          verdictTag = 'Ready to test';
+          verdictClass = 'status-good';
+          verdictSummary = 'Crisp length, clean deliverability profile, and natural fit for ' + cfg.label.toLowerCase() + '.';
+        } else if (total >= 62) {
+          verdictHeadline = 'Solid draft, room to sharpen';
+          verdictTag = 'Needs polish';
+          verdictClass = 'status-warn';
+          verdictSummary = 'Readable overall, but tightening a few words or removing filter signals could improve open rate.';
+        } else {
+          verdictHeadline = 'High risk of low opens or filtering';
+          verdictTag = 'Rewrite advised';
+          verdictClass = 'status-bad';
+          verdictSummary = 'Heavy trigger signals, truncation, or vague phrasing will likely hold this line back.';
+        }
+
+        if (tips.length === 0) {
+          tips.push('Looking strong. Consider A/B testing one of the rewrite angles below against this draft on a 10–20% sample.');
+        }
+
+        return {
+          empty: false,
+          total: total,
+          chars: chars,
+          words: words,
+          lengthScore: lengthScore,
+          spamScore: spamScore,
+          clarityScore: clarityScore,
+          balanceScore: balanceScore,
+          spamHits: foundTriggers,
+          tips: tips.slice(0, 4),
+          verdictHeadline: verdictHeadline,
+          verdictTag: verdictTag,
+          verdictClass: verdictClass,
+          verdictSummary: verdictSummary,
+          lengthNote: lengthNote,
+          spamNote: spamNote,
+          clarityNote: clarityNote,
+          balanceNote: balanceNote,
+          lengthLabel: lengthLabel,
+          spamLabel: spamLabel,
+          clarityLabel: clarityLabel,
+          balanceLabel: balanceLabel
+        };
+      }
+
+      // --- Client-Side Rewrite Generator ---
+      // Optional API hook: To connect a live LLM endpoint later, replace or augment
+      // generateRewrites() with a fetch('/api/rewrite-subject', { method: 'POST', ... }) call.
+      function extractTopicCore(text) {
+        var cleaned = text
+          .replace(/[!?.]+/g, ' ')
+          .replace(/\b(free demo|free|urgent|act now|today|hurry|click below|100%|guaranteed|monthly newsletter|weekly newsletter|company updates|updates & news|revolutionize|your)\b/gi, ' ')
+          .replace(/\s+/g, ' ')
+          .trim();
+        if (cleaned.length < 4) {
+          return 'your Q4 goals';
+        }
+        var words = cleaned.split(' ').slice(0, 5).join(' ');
+        return words.charAt(0).toLowerCase() + words.slice(1);
+      }
+
+      function generateRewrites(rawText, contextKey, offset) {
+        var text = (rawText || '').trim();
+        var core = extractTopicCore(text);
+        var hasPercent = text.match(/(\d+%|\$\d+)/);
+        var offer = hasPercent ? hasPercent[0] : '20% off';
+        var companyMatch = text.match(/(\{\{[^}]+\}\}|\[[A-Za-z_ ]+\])/);
+        var token = companyMatch ? companyMatch[0] : '{{Company}}';
+
+        var banks = {
+          cold: [
+            { angle: 'Short & peer-like', line: 'quick question on ' + core },
+            { angle: 'Specific observation', line: '2 ideas for ' + token + '\'s ' + (core.length > 26 ? 'workflow' : core) },
+            { angle: 'Low-friction ask', line: 'Worth exploring ' + core + '?' },
+            { angle: 'Direct outcome', line: 'Cutting friction in ' + core },
+            { angle: 'Conversational', line: 'Noticed something about ' + core }
+          ],
+          newsletter: [
+            { angle: 'Curiosity + number', line: '3 lessons from ' + core },
+            { angle: 'Question hook', line: 'Are you still handling ' + core + ' the old way?' },
+            { angle: 'Editorial takeaway', line: 'What changed in ' + core + ' this month' },
+            { angle: 'Contrarian angle', line: 'Why most teams get ' + core + ' wrong' },
+            { angle: 'Tight summary', line: 'Inside: ' + core + ' (4-min read)' }
+          ],
+          promo: [
+            { angle: 'Clear offer + deadline', line: offer + ' ends tonight at midnight' },
+            { angle: 'Benefit-first', line: 'Save ' + offer + ' on ' + (core.length > 24 ? 'fall favorites' : core) },
+            { angle: 'Clean reminder', line: 'Final hours for ' + offer + ' storewide' },
+            { angle: 'No-hype direct', line: 'Your ' + offer + ' member code is active' },
+            { angle: 'Curated pick', line: 'Back in stock + ' + offer + ' through Sunday' }
+          ],
+          cart: [
+            { angle: 'Helpful reminder', line: 'Still thinking it over? Your cart is saved' },
+            { angle: 'Low-pressure check', line: 'Did something go wrong at checkout?' },
+            { angle: 'Modest incentive', line: 'Take 10% off to finish your order' },
+            { angle: 'Stock note', line: 'Your items are still waiting in your bag' },
+            { angle: 'Support-first', line: 'Questions about your order before you check out?' }
+          ]
+        };
+
+        var pool = banks[contextKey] || banks.cold;
+        var rotated = [];
+        for (var i = 0; i < 4; i++) {
+          rotated.push(pool[(i + offset) % pool.length]);
+        }
+        return rotated;
+      }
+
+      // --- Render Functions ---
+      function renderPreview(subject, sender, preheader) {
+        var cleanSubj = (subject || '').trim() || 'Your email subject line appears here';
+        var cleanSender = (sender || '').trim() || 'Sender Name';
+        var cleanPre = (preheader || '').trim() || 'Add preheader text to preview the second inbox line.';
+        var limit = state.client === 'ios' ? 37 : 43;
+
+        elPreviewSender.textContent = cleanSender;
+        elPreviewPreheader.textContent = cleanPre;
+
+        if (cleanSubj.length > limit) {
+          var visible = escapeHtml(cleanSubj.slice(0, limit));
+          var clipped = escapeHtml(cleanSubj.slice(limit));
+          elPreviewSubject.innerHTML = visible + '<span class="clipped">&hellip; (' + clipped.length + ' chars hidden)</span>';
+        } else {
+          elPreviewSubject.textContent = cleanSubj;
+        }
+
+        elPreviewCaption.innerHTML = state.client === 'ios'
+          ? 'Simulated 375px viewport &middot; iPhone Mail clips around 36&ndash;38 characters.'
+          : 'Simulated 375px viewport &middot; Gmail Android clips around 40&ndash;45 characters.';
+      }
+
+      function renderAnalysis(recordHistory) {
+        var subject = elSubject.value;
+        var result = analyzeSubject(subject, state.context);
+
+        // Live counts
+        elCharCount.textContent = result.chars;
+        elWordCount.textContent = result.words;
+        if (result.chars === 0) {
+          elMobileFitBadge.textContent = 'Enter subject';
+        } else if (result.chars <= 38) {
+          elMobileFitBadge.textContent = 'Fits iOS & Gmail';
+        } else if (result.chars <= 45) {
+          elMobileFitBadge.textContent = 'Fits Gmail, tight on iOS';
+        } else {
+          elMobileFitBadge.textContent = 'Clips on mobile';
+        }
+
+        // Score dial
+        var circumference = 213.6;
+        var offset = circumference - (circumference * result.total) / 100;
+        elScoreRing.style.strokeDashoffset = offset.toFixed(1);
+        if (result.total >= 82) {
+          elScoreRing.style.stroke = '#15803D';
+        } else if (result.total >= 62) {
+          elScoreRing.style.stroke = '#B45309';
+        } else {
+          elScoreRing.style.stroke = '#B91C1C';
+        }
+        elScoreValue.textContent = result.total;
+
+        // Verdict
+        elVerdictHeadline.textContent = result.verdictHeadline;
+        elVerdictTag.textContent = result.verdictTag;
+        elVerdictTag.className = 'status-text-tag ' + result.verdictClass;
+        elVerdictSummary.textContent = result.verdictSummary;
+
+        // Breakdown rows
+        updateMetricRow('length', result.lengthScore, result.lengthLabel, result.lengthNote);
+        updateMetricRow('spam', result.spamScore, result.spamLabel, result.spamNote);
+        updateMetricRow('clarity', result.clarityScore, result.clarityLabel, result.clarityNote);
+        updateMetricRow('balance', result.balanceScore, result.balanceLabel, result.balanceNote);
+
+        // Spam trigger chips
+        elSpamHits.innerHTML = '';
+        for (var i = 0; i < result.spamHits.length; i++) {
+          var span = document.createElement('span');
+          span.className = 'spam-word';
+          span.textContent = result.spamHits[i];
+          elSpamHits.appendChild(span);
+        }
+
+        // Tips
+        elTipsList.innerHTML = '';
+        for (var j = 0; j < result.tips.length; j++) {
+          var li = document.createElement('li');
+          li.textContent = result.tips[j];
+          elTipsList.appendChild(li);
+        }
+
+        // Rewrites
+        var rewrites = generateRewrites(subject, state.context, state.shuffleOffset);
+        elRewritesList.innerHTML = '';
+        rewrites.forEach(function (item) {
+          var row = document.createElement('div');
+          row.className = 'rewrite-row';
+
+          var left = document.createElement('div');
+          var header = document.createElement('div');
+          header.className = 'rewrite-header';
+          header.textContent = item.angle + ' · ' + item.line.length + ' chars';
+          var p = document.createElement('p');
+          p.className = 'rewrite-line';
+          p.textContent = item.line;
+          left.appendChild(header);
+          left.appendChild(p);
+
+          var actions = document.createElement('div');
+          actions.className = 'rewrite-actions';
+
+          var useBtn = document.createElement('button');
+          useBtn.type = 'button';
+          useBtn.className = 'mini-btn mini-btn-accent';
+          useBtn.textContent = 'Test this';
+          useBtn.addEventListener('click', function () {
+            elSubject.value = item.line;
+            renderAnalysis(true);
+            elSubject.focus();
+          });
+
+          var copyBtn = document.createElement('button');
+          copyBtn.type = 'button';
+          copyBtn.className = 'mini-btn';
+          copyBtn.textContent = 'Copy';
+          copyBtn.addEventListener('click', function () {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+              navigator.clipboard.writeText(item.line);
+            }
+            copyBtn.textContent = 'Copied';
+            setTimeout(function () {
+              copyBtn.textContent = 'Copy';
+            }, 1400);
+          });
+
+          actions.appendChild(useBtn);
+          actions.appendChild(copyBtn);
+          row.appendChild(left);
+          row.appendChild(actions);
+          elRewritesList.appendChild(row);
+        });
+
+        // Mobile preview
+        renderPreview(subject, elSender.value, elPreheader.value);
+
+        // Session history
+        if (recordHistory && !result.empty) {
+          addToHistory(subject.trim(), result.chars, result.total, state.context);
+        }
+      }
+
+      function updateMetricRow(key, score, label, note) {
+        var scoreEl = document.getElementById('score-' + key);
+        var badgeEl = document.getElementById('badge-' + key);
+        var barEl = document.getElementById('bar-' + key);
+        var noteEl = document.getElementById('note-' + key);
+
+        scoreEl.textContent = score + '/25';
+        badgeEl.textContent = label;
+        barEl.style.width = Math.round((score / 25) * 100) + '%';
+        noteEl.textContent = note;
+        setStatusStyle(badgeEl, barEl, score / 25);
+      }
+
+      function addToHistory(subject, chars, score, contextKey) {
+        // Avoid duplicate consecutive entries
+        if (state.history.length > 0 && state.history[0].subject === subject && state.history[0].context === contextKey) {
+          return;
+        }
+        state.history.unshift({
+          subject: subject,
+          chars: chars,
+          score: score,
+          context: contextKey
+        });
+        if (state.history.length > 6) {
+          state.history.pop();
+        }
+        renderHistory();
+      }
+
+      function renderHistory() {
+        elHistoryTbody.innerHTML = '';
+        if (state.history.length === 0) {
+          var emptyRow = document.createElement('tr');
+          emptyRow.innerHTML = '<td colspan="3" style="color: var(--text-muted); text-align: center; padding: 16px;">No variations saved yet in this session.</td>';
+          elHistoryTbody.appendChild(emptyRow);
+          return;
+        }
+
+        state.history.forEach(function (entry) {
+          var tr = document.createElement('tr');
+          var tdSubj = document.createElement('td');
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'history-subject-btn';
+          btn.textContent = entry.subject;
+          btn.title = entry.subject;
+          btn.addEventListener('click', function () {
+            setContext(entry.context);
+            elSubject.value = entry.subject;
+            renderAnalysis(false);
+          });
+          tdSubj.appendChild(btn);
+
+          var tdChars = document.createElement('td');
+          tdChars.className = 'num tabular';
+          tdChars.textContent = entry.chars;
+
+          var tdScore = document.createElement('td');
+          tdScore.className = 'num tabular';
+          var tag = document.createElement('span');
+          tag.className = 'status-text-tag ' + (entry.score >= 82 ? 'status-good' : (entry.score >= 62 ? 'status-warn' : 'status-bad'));
+          tag.textContent = entry.score;
+          tdScore.appendChild(tag);
+
+          tr.appendChild(tdSubj);
+          tr.appendChild(tdChars);
+          tr.appendChild(tdScore);
+          elHistoryTbody.appendChild(tr);
+        });
+      }
+
+      function setContext(contextKey) {
+        state.context = contextKey;
+        var buttons = document.querySelectorAll('.seg-btn');
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].setAttribute('aria-pressed', buttons[i].getAttribute('data-context') === contextKey ? 'true' : 'false');
+        }
+      }
+
+      // --- Event Listeners ---
+      elSubject.addEventListener('input', function () {
+        renderAnalysis(false);
+      });
+
+      elSender.addEventListener('input', function () {
+        renderPreview(elSubject.value, elSender.value, elPreheader.value);
+      });
+
+      elPreheader.addEventListener('input', function () {
+        renderPreview(elSubject.value, elSender.value, elPreheader.value);
+      });
+
+      elForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        renderAnalysis(true);
+      });
+
+      elClearBtn.addEventListener('click', function () {
+        elSubject.value = '';
+        renderAnalysis(false);
+        elSubject.focus();
+      });
+
+      elRefreshRewrites.addEventListener('click', function () {
+        state.shuffleOffset = (state.shuffleOffset + 1) % 5;
+        renderAnalysis(false);
+      });
+
+      elClearHistoryBtn.addEventListener('click', function () {
+        state.history = [];
+        renderHistory();
+      });
+
+      document.querySelectorAll('.seg-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          setContext(btn.getAttribute('data-context'));
+          renderAnalysis(false);
+        });
+      });
+
+      document.querySelectorAll('.preview-tab').forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          state.client = tab.getAttribute('data-client');
+          document.querySelectorAll('.preview-tab').forEach(function (t) {
+            t.setAttribute('aria-pressed', t === tab ? 'true' : 'false');
+          });
+          renderPreview(elSubject.value, elSender.value, elPreheader.value);
+        });
+      });
+
+      document.querySelectorAll('.sample-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = parseInt(btn.getAttribute('data-sample'), 10);
+          var sample = SAMPLES[idx];
+          if (!sample) return;
+          setContext(sample.context);
+          elSubject.value = sample.subject;
+          elSender.value = sample.sender;
+          elPreheader.value = sample.preheader;
+          renderAnalysis(true);
+        });
+      });
+
+      document.getElementById('header-jump-btn').addEventListener('click', function () {
+        setTimeout(function () { elSubject.focus(); }, 120);
+      });
+
+      // --- Initial Boot ---
+      renderAnalysis(true);
+    })();
+  </script>
+</body>
+</html>
